@@ -40,7 +40,7 @@ public class RoleController {
     public ResponseEntity<String> deleteResponseEntity(@PathVariable(required = false) int id,@RequestBody(required = false) Map<String , Object> request) {
         boolean deletedRole = roleImpService.deleteRole(id, request);
         if (deletedRole) {
-            logger.info("data Adress =====> Delete succesfully");
+            logger.info("data Role =====> Delete succesfully" );
             return ResponseEntity.ok("Role deleted successfully");
         } else {
             return ResponseEntity.notFound().build();
